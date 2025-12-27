@@ -1,0 +1,83 @@
+.card {
+    width: 60px;
+    height: 84px;
+    background: var(--gradient-card);
+    border-radius: var(--radius-card);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.25rem;
+    box-shadow: var(--shadow-md);
+    position: relative;
+    transition: transform var(--transition-fast);
+    user-select: none;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.card.red {
+    color: var(--color-suit-red);
+}
+
+.card.black {
+    color: var(--color-suit-black);
+}
+
+.card.facedown {
+    background: linear-gradient(135deg, #1a365d 0%, #2c5282 50%, #1a365d 100%);
+    color: transparent;
+}
+
+.card.facedown::before {
+    content: '♠♣♥♦';
+    position: absolute;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.1);
+    text-align: center;
+    line-height: 1.4;
+}
+
+.card .rank {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.card .suit {
+    font-size: 1.25rem;
+    line-height: 1;
+}
+
+.card-mini {
+    width: 40px;
+    height: 56px;
+    font-size: 0.875rem;
+}
+
+.card-mini .rank {
+    font-size: 1rem;
+}
+
+.card-mini .suit {
+    font-size: 0.875rem;
+}
+
+/* Card dealing animation */
+@keyframes dealCard {
+    from {
+        opacity: 0;
+        transform: translateY(-100px) rotateY(180deg) scale(0.5);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) rotateY(0) scale(1);
+    }
+}
+
+.card.dealing {
+    animation: dealCard 0.4s ease-out forwards;
+}

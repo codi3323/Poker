@@ -1,0 +1,116 @@
+.player-seat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-md);
+    background: rgba(26, 32, 41, 0.9);
+    border-radius: var(--radius-lg);
+    border: 2px solid transparent;
+    transition: all var(--transition-fast);
+    min-width: 140px;
+}
+
+.player-seat.current-turn {
+    border-color: var(--color-accent-gold);
+    box-shadow: var(--shadow-glow-gold);
+}
+
+.player-seat.folded {
+    opacity: 0.5;
+}
+
+.player-seat.winner {
+    border-color: var(--color-accent-emerald);
+    box-shadow: var(--shadow-glow-emerald);
+}
+
+.player-seat.disconnected {
+    opacity: 0.4;
+}
+
+.avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--gradient-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #000;
+}
+
+.player-name {
+    font-weight: 600;
+    color: var(--color-text-primary);
+    font-size: 0.875rem;
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.chips {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    color: var(--color-accent-gold);
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+.chips-icon {
+    width: 16px;
+    height: 16px;
+    background: var(--color-accent-gold);
+    border-radius: 50%;
+    border: 2px solid #000;
+}
+
+.cards-container {
+    display: flex;
+    gap: 4px;
+    min-height: 56px;
+}
+
+.bet-amount {
+    background: var(--color-bg-primary);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-sm);
+    color: var(--color-accent-emerald);
+    font-weight: 600;
+    font-size: 0.75rem;
+}
+
+.dealer-button {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 24px;
+    height: 24px;
+    background: var(--color-accent-gold);
+    color: #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.625rem;
+    font-weight: 900;
+}
+
+.status-badge {
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-secondary);
+}
+
+.status-badge.folded-text {
+    color: var(--color-accent-ruby);
+}
+
+.status-badge.all-in {
+    color: var(--color-accent-emerald);
+}

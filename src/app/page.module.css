@@ -1,0 +1,130 @@
+.lobby-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-xl);
+  background:
+    radial-gradient(ellipse at top, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+    var(--color-bg-primary);
+}
+
+.logo {
+  margin-bottom: var(--space-xl);
+  text-align: center;
+}
+
+.logo h1 {
+  font-size: 3.5rem;
+  margin-bottom: var(--space-sm);
+}
+
+.logo .tagline {
+  color: var(--color-text-secondary);
+  font-size: 1.125rem;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 400px;
+}
+
+.tabs {
+  display: flex;
+  margin-bottom: var(--space-lg);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--color-bg-secondary);
+}
+
+.tab {
+  flex: 1;
+  padding: var(--space-md);
+  background: transparent;
+  border: none;
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.tab.active {
+  background: var(--color-accent-gold);
+  color: #000;
+}
+
+.tab:not(.active):hover {
+  background: var(--color-bg-tertiary);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.form-label {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.error-message {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid var(--color-accent-ruby);
+  color: var(--color-accent-ruby);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin: var(--space-lg) 0;
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--color-bg-tertiary);
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-xl);
+  margin-top: var(--space-2xl);
+  flex-wrap: wrap;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  text-align: center;
+}
+
+.feature-icon {
+  font-size: 2rem;
+}
+
+.feature-text {
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+}
